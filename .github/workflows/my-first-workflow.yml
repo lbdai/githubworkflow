@@ -41,8 +41,11 @@ jobs:
         if: github.ref != 'refs/heads/main'
         run: echo "This is not the main branch."
 
-      - name: Run tests
-        run: npm install
+      - name: Run depenencies
+        run: npm ci
+      
+      - name: Run test
+        run: npm test
 
       - name: Debug message
         if: env.DEBUG == 'true'
