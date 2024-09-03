@@ -60,7 +60,7 @@ jobs:
         run: echo "Debugging is enabled."
 
   post-build-actions:
-    needs: [build-and-test-1, build-and-test-2]
+    needs: [build-and-test-1]
     runs-on: ubuntu-latest
     steps:
       - name: Publish test results
